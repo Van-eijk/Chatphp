@@ -1,0 +1,212 @@
+html{
+    /*border: 2px solid blue;*/
+    padding: 0px 0px;
+    height: 97%;
+    
+
+}
+:root{
+    --colorArrierePlan : #d60ce8 ;
+    --colorArrierePlanMainChat : #f7f8fa ;
+
+}
+
+
+body{
+    /*border: 2px solid yellow;*/
+    height: 100%;
+    box-sizing: border-box;
+
+}
+
+.mainhome{
+    height: 100%;
+    width: 100%;
+    /*border: 2px solid black;*/
+    margin: 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arriereplan::before{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 220px;
+    content: "";
+    background-color: var(--colorArrierePlan);
+    z-index: -1;
+
+}
+
+.mainchat{
+    width: 900px;
+    height: 600px;
+    border: 2px solid black;
+    background-color: var(--colorArrierePlanMainChat);
+    display: flex;
+
+
+}
+
+.leftSide{
+    border: 5px solid black;
+    /*width: 300px;*/
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.header-leftSide{
+    border: 1px solid black;
+    height: 55px;
+    padding: 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-info{
+    display: flex;
+    align-items: center;
+}
+.photo-profil{
+    border: 2px solid red;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    margin-right: 9px;
+}
+.user-info p{
+    font-weight: bold;
+    font-size: large;
+}
+.menu-general{
+    border: 2px solid green;
+    height: 40px;
+    width: 40px;
+}
+.search-bar{
+    border: 1px solid black ;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+
+}
+.form-search{
+    display: flex;
+    align-items: center;
+    border: 1px solid black ;
+
+    width: 100%;
+}
+.form-search input{
+    display: inline-block;
+    height: 26px;
+    width: 100%;
+    outline: none;
+}
+.form-search button{
+    height: 28px;
+        border: 1px solid black ;
+
+}
+.members-resultSearch{
+    border: 3px solid blue ;
+    flex: 1;
+    display: flex;
+}
+.members{
+    border: 3px solid yellow ;
+    flex: 1;
+}
+
+.rightSide{
+    border: 5px solid red;
+    flex: 1;
+    display: flex;
+
+}
+.content-chat{
+    border: 5px solid yellow;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.header-chat{
+    border: 2px solid black;
+    height: 60px;
+    padding: 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.info-destinataire{
+    display: flex;
+    align-items: center;
+}
+.photo-destinataire{
+    height: 55px;
+    width: 55px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 9px;
+}
+.info-destinataire p{
+    font-size: large;
+    font-weight: bold;
+}
+.menu-destinataire{
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+}
+
+.discussion{
+    border: 2px solid blue;
+    height: 100%;
+}
+
+.footer-chat{
+    border: 2px solid blue;
+    height: 50px;
+    padding: 5px 5px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-file{
+    border: 1px solid black;
+    height: 45px;
+    width: 45px;
+}
+
+.message{
+    border: 1px solid green;
+    flex: 1px;
+    outline: none;
+    height: 25px;
+    padding: 5px 5px;
+    resize: none;
+    font-size: large;
+    max-height: 60px;
+
+}
+
+.message::-webkit-scrollbar{
+    width: 0px;
+}
+
+
+.send-message{
+    border: 1px solid black;
+    height: 45px;
+    width: 45px;
+}
