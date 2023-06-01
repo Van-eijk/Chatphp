@@ -173,6 +173,19 @@ button[type="reset"]{
     overflow: auto;
     scrollbar-width: thin;
 }
+
+.members-resultSearch::-webkit-scrollbar{
+    width: 6px;
+    height: 6px;
+}
+
+.members-resultSearch::-webkit-scrollbar-thumb{
+    background-color: rgba(11,20,26,.2);
+}
+
+.members-resultSearch::-webkit-scrollbar-track{
+    background: rgba(255,255,255,.1);
+}
 .members{
     /*border: 3px solid yellow ;*/
     flex: 1;
@@ -282,13 +295,104 @@ button[type="reset"]{
 .discussion{
     /*border: 2px solid blue;*/
     height: 100%;
-    background-image: url("../../pictures/chat.jpg");
-   /* background-attachment: fixed;
+    background-image: url("../../pictures/chat2.png");
+    padding: 5px 10px 5px 10px;
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;*/
+    background-size: cover;
+    background-position: center;
+    overflow: auto;
 
    
 }
+
+/**** style de l'assenceur dans le chat ******/
+
+.discussion::-webkit-scrollbar{
+    width: 6px;
+    height: 6px;
+}
+
+.discussion::-webkit-scrollbar-thumb{
+    background-color: rgba(11,20,26,.2);
+}
+
+.discussion::-webkit-scrollbar-track{
+    background: rgba(255,255,255,.1);
+}
+
+.photo-message-left{
+    display: flex;
+    margin: 0px 0px 10px 0px;
+    /*border: 2px solid red;*/
+
+}
+.photo-left, .photo-right{
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    min-height: 45px;
+    border-radius: 50%;
+    /*border: 2px solid yellow;*/
+    padding: 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.photo-left img, .photo-right img{
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    margin: 0px 0px;
+    
+}
+
+.message-left{
+    background-color: #fff;
+    max-width: 400px;
+    margin: 0px 0px 0px 8px;
+    padding: 6px 7px 3px 9px;
+    border-radius: 8px;
+    border-top-left-radius: 0px;
+    box-shadow: 0 1px 0.5px rgba(11, 20, 26, .13);
+}
+.message-left p{
+    font-weight: 400;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    /*font-size: x-small;*/
+}
+.message-date{
+    text-align: right;
+    font-size: 12px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+.photo-message-right{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0px 0px 10px 0px;
+    /*border: 2px solid red;*/
+
+}
+.message-right{
+    background-color: #d9fdd3;    
+    max-width: 400px;
+    margin: 0px 8px 0px 0px;
+    padding: 6px 7px 3px 9px;
+    border-radius: 8px;
+    border-top-right-radius: 0px;
+    box-shadow: 0 1px 0.5px rgba(11, 20, 26, .13);
+}
+.message-right p{
+    font-weight: 400;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    /*font-size: large;*/
+}
+
+
 
 .footer-chat{
     /*border: 2px solid blue;*/
