@@ -169,7 +169,10 @@
 
                             </div>
                             <div class="message-left">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolore possimus at earum! Voluptatum ipsum aut vero vel enim nostrum quisquam libero, facere amet numquam quos veritatis maiores ex nesciunt!</p>
+                                <p class="message-left-name">
+                                    Username
+                                </p>
+                                <p class="main-message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolore possimus at earum! Voluptatum ipsum aut vero vel enim nostrum quisquam libero, facere amet numquam quos veritatis maiores ex nesciunt!</p>
                                 <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
                             </div>
 
@@ -179,7 +182,103 @@
                                 <img src="pictures/iconDefault.png" alt="">
                             </div>
                             <div class="message-right">
-                                <p>Lorem ipsum, dolor sit </p>
+                                <p class="main-message">Lorem ipsum, dolor sit </p>
+                                <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+                        <div class="photo-message-left">
+                            <div class="photo-left">
+        
+                                <img src="pictures/iconDefault.png" alt="">
+
+                            </div>
+                            <div class="message-left">
+                                <p class="message-left-name">
+                                    Username
+                                </p>
+                                <p class="main-message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolore possimus at earum! Voluptatum ipsum aut vero vel enim nostrum quisquam libero, facere amet numquam quos veritatis maiores ex nesciunt!</p>
+                                <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
+                            </div>
+
+                        </div>
+                        <div class="photo-message-right">
+                            <div class="photo-right">
+                                <img src="pictures/iconDefault.png" alt="">
+                            </div>
+                            <div class="message-right">
+                                <p class="main-message">Lorem ipsum, dolor sit </p>
+                                <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+                        <div class="photo-message-left">
+                            <div class="photo-left">
+        
+                                <img src="pictures/iconDefault.png" alt="">
+
+                            </div>
+                            <div class="message-left">
+                                <p class="message-left-name">
+                                    Username
+                                </p>
+                                <p class="main-message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolore possimus at earum! Voluptatum ipsum aut vero vel enim nostrum quisquam libero, facere amet numquam quos veritatis maiores ex nesciunt!</p>
+                                <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
+                            </div>
+
+                        </div>
+                        <div class="photo-message-right">
+                            <div class="photo-right">
+                                <img src="pictures/iconDefault.png" alt="">
+                            </div>
+                            <div class="message-right">
+                                <p class="main-message">Lorem ipsum, dolor sit </p>
+                                <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+                        <div class="photo-message-left">
+                            <div class="photo-left">
+        
+                                <img src="pictures/iconDefault.png" alt="">
+
+                            </div>
+                            <div class="message-left">
+                                <p class="message-left-name">
+                                    Username
+                                </p>
+                                <p class="main-message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolore possimus at earum! Voluptatum ipsum aut vero vel enim nostrum quisquam libero, facere amet numquam quos veritatis maiores ex nesciunt!</p>
+                                <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
+                            </div>
+
+                        </div>
+                        <div class="photo-message-right">
+                            <div class="photo-right">
+                                <img src="pictures/iconDefault.png" alt="">
+                            </div>
+                            <div class="message-right">
+                                <p class="main-message">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor soluta est cupiditate autem, vitae eos iusto sunt quam dolorum, maiores reprehenderit velit cumque maxime ab natus, atque sapiente eum aliquid. </p>
                                 <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
 
                             </div>
@@ -196,7 +295,10 @@
 
                             </div>
                             <div class="message-left">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolore possimus at earum! Voluptatum ipsum aut vero vel enim nostrum quisquam libero, facere amet numquam quos veritatis maiores ex nesciunt!</p>
+                                <p class="message-left-name">
+                                    Username
+                                </p>
+                                <p class="main-message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolore possimus at earum! Voluptatum ipsum aut vero vel enim nostrum quisquam libero, facere amet numquam quos veritatis maiores ex nesciunt!</p>
                                 <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
                             </div>
 
@@ -206,7 +308,7 @@
                                 <img src="pictures/iconDefault.png" alt="">
                             </div>
                             <div class="message-right">
-                                <p>Lorem ipsum, dolor sit </p>
+                                <p class="main-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni eligendi temporibus veritatis aliquid numquam sint sequi quaerat odit accusamus, voluptatum rerum maiores! Veritatis laudantium voluptatem eaque eligendi aliquid aliquam distinctio! </p>
                                 <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
 
                             </div>
@@ -223,7 +325,10 @@
 
                             </div>
                             <div class="message-left">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolore possimus at earum! Voluptatum ipsum aut vero vel enim nostrum quisquam libero, facere amet numquam quos veritatis maiores ex nesciunt!</p>
+                                <p class="message-left-name">
+                                    Username
+                                </p>
+                                <p class="main-message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolore possimus at earum! Voluptatum ipsum aut vero vel enim nostrum quisquam libero, facere amet numquam quos veritatis maiores ex nesciunt!</p>
                                 <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
                             </div>
 
@@ -233,7 +338,7 @@
                                 <img src="pictures/iconDefault.png" alt="">
                             </div>
                             <div class="message-right">
-                                <p>Lorem ipsum, dolor sit </p>
+                                <p class="main-message">Lorem ipsum, dolor sit </p>
                                 <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
 
                             </div>
@@ -243,108 +348,6 @@
 
 
 
-
-                        <div class="photo-message-left">
-                            <div class="photo-left">
-        
-                                <img src="pictures/iconDefault.png" alt="">
-
-                            </div>
-                            <div class="message-left">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolore possimus at earum! Voluptatum ipsum aut vero vel enim nostrum quisquam libero, facere amet numquam quos veritatis maiores ex nesciunt!</p>
-                                <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
-                            </div>
-
-                        </div>
-                        <div class="photo-message-right">
-                            <div class="photo-right">
-                                <img src="pictures/iconDefault.png" alt="">
-                            </div>
-                            <div class="message-right">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis minima, soluta cupiditate facilis architecto blanditiis possimus ipsam maiores sapiente pariatur aperiam dolores repellat doloremque. Ad reprehenderit culpa voluptas mollitia laborum!</p>
-                                <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
-
-                            </div>
-
-                        </div>
-
-                        <div class="photo-message-left">
-                            <div class="photo-left">
-        
-                                <img src="pictures/iconDefault.png" alt="">
-
-                            </div>
-                            <div class="message-left">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolore possimus at earum! Voluptatum ipsum aut vero vel enim nostrum quisquam libero, facere amet numquam quos veritatis maiores ex nesciunt!</p>
-                                <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
-                            </div>
-
-                        </div>
-                        <div class="photo-message-right">
-                            <div class="photo-right">
-                                <img src="pictures/iconDefault.png" alt="">
-                            </div>
-                            <div class="message-right">
-                                <p>Lorem ipsum, dolor sit </p>
-                                <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
-
-                            </div>
-
-                        </div>
-
-
-
-
-                        <div class="photo-message-left">
-                            <div class="photo-left">
-        
-                                <img src="pictures/iconDefault.png" alt="">
-
-                            </div>
-                            <div class="message-left">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolore possimus at earum! Voluptatum ipsum aut vero vel enim nostrum quisquam libero, facere amet numquam quos veritatis maiores ex nesciunt!</p>
-                                <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
-                            </div>
-
-                        </div>
-                        <div class="photo-message-right">
-                            <div class="photo-right">
-                                <img src="pictures/iconDefault.png" alt="">
-                            </div>
-                            <div class="message-right">
-                                <p>Lorem ipsum, dolor sit gygkjuihkn hhliljhuhu oihuoigu </p>
-                                <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
-
-                            </div>
-
-                        </div>
-
-
-
-
-                        <div class="photo-message-left">
-                            <div class="photo-left">
-        
-                                <img src="pictures/iconDefault.png" alt="">
-
-                            </div>
-                            <div class="message-left">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolore possimus at earum! Voluptatum ipsum aut vero vel enim nostrum quisquam libero, facere amet numquam quos veritatis maiores ex nesciunt!</p>
-                                <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
-                            </div>
-
-                        </div>
-                        <div class="photo-message-right">
-                            <div class="photo-right">
-                                <img src="pictures/iconDefault.png" alt="">
-                            </div>
-                            <div class="message-right">
-                                <p>Lorem ipsum, dolor sit </p>
-                                <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
-
-                            </div>
-
-                        </div>
 
                     </div>
                     

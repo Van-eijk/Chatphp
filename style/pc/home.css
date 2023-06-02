@@ -295,7 +295,7 @@ button[type="reset"]{
 .discussion{
     /*border: 2px solid blue;*/
     height: 100%;
-    background-image: url("../../pictures/chat2.png");
+    background-image: url("../../pictures/chatmini.png");
     padding: 5px 10px 5px 10px;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -357,11 +357,18 @@ button[type="reset"]{
     border-top-left-radius: 0px;
     box-shadow: 0 1px 0.5px rgba(11, 20, 26, .13);
 }
-.message-left p{
-    font-weight: 400;
+.message-left-name{
     margin: 0px 0px;
     padding: 0px 0px;
-    /*font-size: x-small;*/
+    font-weight: bold;
+    color: var(--colorArrierePlan);
+}
+.main-message{
+    margin: 0px 0px;
+    padding: 0px 0px;
+    /*font-size: x-small;
+    color: blue;*/
+    font-weight: 300;
 }
 .message-date{
     text-align: right;
@@ -385,12 +392,13 @@ button[type="reset"]{
     border-top-right-radius: 0px;
     box-shadow: 0 1px 0.5px rgba(11, 20, 26, .13);
 }
-.message-right p{
-    font-weight: 400;
-    margin: 0px 0px;
-    padding: 0px 0px;
-    /*font-size: large;*/
-}
+    /*.message-right p{
+        font-weight: 400;
+        margin: 0px 0px;
+        padding: 0px 0px;
+        font-size: large;
+    }
+    */
 
 
 
