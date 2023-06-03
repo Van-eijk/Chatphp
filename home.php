@@ -374,7 +374,7 @@
     </div>
 
     <script src="js/scrollTextarea.js"></script>
-    <script src="js/searchBar"></script>
+    <script src="js/searchBar.js"></script>
     
 </body>
 </html>
