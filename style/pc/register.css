@@ -1,0 +1,180 @@
+html{
+    /*border: 2px solid blue;*/
+    padding: 0px 0px;
+    height: 97%;
+    
+
+}
+:root{
+    --colorArrierePlan : #d60ce8 ;
+    --colorArrierePlanMainChat : #FAF9FC ;
+    --colorBody : #EAE8EE ;
+    --colorHeaderChat : #D7D0E2 ;
+
+
+}
+
+
+body{
+    /*border: 2px solid yellow;*/
+    height: 100%;
+    box-sizing: border-box;
+    background-color: var(--colorBody);
+    box-sizing: border-box;
+
+
+}
+
+.mainhome{
+    height: 100%;
+    width: 100%;
+    /*border: 2px solid black;*/
+    margin: 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arriereplan::before{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 220px;
+    content: "";
+    background-color: var(--colorArrierePlan);
+    z-index: -1;
+
+}
+
+.mainchat{
+    width: 900px;
+    height: 600px;
+    border: 1px solid black;
+    background-color: var(--colorArrierePlanMainChat);
+    display: flex;
+    /*padding: 1px;*/
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.icon-user{
+    width: 120px;
+    height: 120px;
+    border: 5px solid var(--colorArrierePlan) ;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px;
+}
+/*.icon-user p{
+    margin: 0px 0px;
+    padding: 0px 0px;
+}*/
+.icon-user img{
+    width: 130px;
+    height: 130px;
+    margin: 0px 0px;
+    /*display: none;*/
+}
+
+form{
+    margin: 20px 0px 0px 0px;
+    /*margin-top: 10px;*/
+    /*border: 1px solid black;*/
+    /*display: none;*/
+
+}
+.pseudo, .password, .mail{
+    display: flex;
+    align-items: center;
+    border: 3px solid var(--colorArrierePlan);
+    height: 40px;
+    width: 350px;
+    border-radius: 50px;
+    padding: 2px 3px;
+    margin-bottom: 15px;
+
+}
+.pseudo i, .password i, .mail i{
+    font-size: 22px;
+    margin: 0px 10px 0px 8px;
+    color: var(--colorArrierePlan);
+}
+
+input{
+    border: none;
+    outline: none;
+    margin: 0px 0px;
+    height: 40px;
+    width: 100%;
+    border-radius: 0px 50px 50px 0px;
+    font-size: x-large;
+    font-weight: bold;
+    background-color: var(--colorArrierePlanMainChat);
+
+}
+input::placeholder{
+    font-weight: 100;
+    opacity: 0.3;
+}
+.iconPwd{
+    /*border: 1px solid black;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 5px 0px 5px;
+    cursor: pointer;
+}
+.iconPwd i{
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+#hidePwd{
+    display: none;
+}
+#hidePwdConfirmation{
+    display: none;
+}
+.sub{
+    display: flex;
+    justify-content: center;
+}
+input[type="submit"]{
+    border-radius: 50px;
+    width: 195px;
+    height: 47px;
+    font-size: large;
+    background-color: var(--colorArrierePlan);
+    color: white;
+    cursor: pointer;
+    margin: 5px 5px;
+}
+
+input[type="submit"]:hover{
+    opacity: 0.8;
+   
+}
+
+.connect{
+    display: flex;
+    align-items: center;
+    margin: 10px  0px 0px 0px;
+
+}
+.connect p{
+    margin: 0px 0px;
+    padding: 0px 0px;
+    /*border: 1px solid black;*/
+
+
+}
+
+a{
+    margin: 0px 0px;
+}

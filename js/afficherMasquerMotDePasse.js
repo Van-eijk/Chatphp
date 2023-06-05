@@ -21,6 +21,39 @@ function afficherMasquerMotDePasse(){
 
     }
     
+
+}
+
+
+/*   Confirmation du mot de passe */
+
+
+
+
+
+
+
+
+let showPwdConfirmation = document.getElementById("showPwdConfirmation") ; // Affiché par defaut
+let hidePwdConfirmation = document.getElementById("hidePwdConfirmation") ; // Masqué par defaut
+let pwdConfirmation = document.getElementById("passwordConfirmation") ; // On récupère le mot de passe de confiramtion du formulaire
+let showConfirmation = true ;
+
+function afficherMasquerMotDePasseConfirmation(){
+    if(showConfirmation){
+        showPwdConfirmation.style.display = "none" ;
+        hidePwdConfirmation.style.display = "block";
+        pwdConfirmation.setAttribute("type","text");
+        showConfirmation = false ;
+
+    }else{
+        showPwdConfirmation.style.display = "block" ;
+        hidePwdConfirmation.style.display = "none";
+        pwdConfirmation.setAttribute("type","password");
+        showConfirmation = true ;
+
+    }
+    
    
    
 
