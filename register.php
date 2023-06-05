@@ -15,25 +15,36 @@
         </div>
         <div class="mainchat">
             <h1>INSCRIPTION</h1>
-            <div class="icon-user">
-                <img src="pictures/iconDefault.png" alt="">
-            </div>
+           <div>
+                <div class="icon-user">
+                    <img src="pictures/iconDefault.png" alt="">
+                </div>
+                <label class="camera" for="userPicture">
+                    <i class="fa-solid fa-camera"></i>
+                </label>
+           </div>
 
             <form action="">
 
+                <!--  Ici on recupère la photo dans l'ordinateur -->
+
+                <input type="file" name="userPicture" id="userPicture">
+
+
+
                 <div class="pseudo">
                     <span><i class="fa-solid fa-user"></i></span>
-                    <input type="text" name="pseudo" autofocus id="pseudo" autocomplete="OFF" placeholder="Pseudo"><br>
+                    <input type="text" name="pseudo" autofocus id="pseudo" autocomplete="OFF" placeholder="Pseudo" required><br>
                 </div>
 
                 <div class="mail">
                     <span><i class="fa-solid fa-envelope"></i></span>
-                    <input type="email" name="mail" autofocus id="mail" autocomplete="OFF" placeholder="E-mail"><br>
+                    <input type="email" name="mail" autofocus id="mail" autocomplete="OFF" placeholder="E-mail" required><br>
                 </div>
 
                 <div class="password">
                     <span><i class="fa-solid fa-lock"></i></span>
-                    <input type="password" name="password" id="password" placeholder="Mot de passe"><br>
+                    <input type="password" name="password" id="password" placeholder="Mot de passe" required><br>
                     <span class="iconPwd" onclick="afficherMasquerMotDePasse()">
                         <i id="showPwd" class="fa-solid fa-eye"></i>
                         <i id="hidePwd" class="fa-solid fa-eye-slash"></i>
@@ -43,7 +54,7 @@
 
                 <div class="password">
                     <span><i class="fa-solid fa-lock"></i></span>
-                    <input type="password" name="passwordConfirmation" id="passwordConfirmation" placeholder="Confirmez le mot de passe"><br>
+                    <input type="password" name="passwordConfirmation" id="passwordConfirmation" placeholder="Confirmez le mot de passe" required><br>
                     <span class="iconPwd" onclick="afficherMasquerMotDePasseConfirmation()">
                         <i id="showPwdConfirmation" class="fa-solid fa-eye"></i>
                         <i id="hidePwdConfirmation" class="fa-solid fa-eye-slash"></i>

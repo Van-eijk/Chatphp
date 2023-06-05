@@ -25,12 +25,12 @@
 
                 <div class="pseudo">
                     <span><i class="fa-solid fa-user"></i></span>
-                    <input type="text" name="pseudo" autofocus id="pseudo" autocomplete="OFF" placeholder="Pseudo"><br>
+                    <input type="text" name="pseudo" autofocus id="pseudo" autocomplete="OFF" placeholder="Pseudo" required><br>
                 </div>
 
                 <div class="password">
                     <span><i class="fa-solid fa-lock"></i></span>
-                    <input type="password" name="password" id="password" placeholder="Mot de passe"><br>
+                    <input type="password" name="password" id="password" placeholder="Mot de passe" required><br>
                     <span class="iconPwd" onclick="afficherMasquerMotDePasse()">
                         <i id="showPwd" class="fa-solid fa-eye"></i>
                         <i id="hidePwd" class="fa-solid fa-eye-slash"></i>
