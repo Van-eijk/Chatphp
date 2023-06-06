@@ -14,13 +14,21 @@
 
         </div>
         <div class="mainchat">
+
+            <!--  Barre de notification   -->
+            <div class="barre-notification" id="notif">
+                <p class="notification">
+                    Photo sélectionnée
+                </p>
+            </div>
+
             <h1>INSCRIPTION</h1>
            <div>
                 <div class="icon-user">
                     <img src="pictures/iconDefault.png" alt="">
                 </div>
                 <label class="camera" for="userPicture">
-                    <i class="fa-solid fa-camera"></i>
+                    <i class="fa-solid fa-camera" id="iconCamera"></i>
                 </label>
            </div>
 
@@ -28,7 +36,7 @@
 
                 <!--  Ici on recupère la photo dans l'ordinateur -->
 
-                <input type="file" name="userPicture" id="userPicture">
+                <input type="file" name="userPicture" id="userPicture" onchange="pictureSelected()">
 
 
 
@@ -80,5 +88,7 @@
 
    
     <script src="js/afficherMasquerMotDePasse.js"></script>
+    <script src="js/pictureSelected.js"></script>
+
 </body>
 </html>
