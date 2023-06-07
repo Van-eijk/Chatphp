@@ -119,6 +119,7 @@ body{
     justify-content: center;
     background-color: var(--colorArrierePlan);
     cursor: pointer;
+    /*overflow: hidden;*/
 }
 
 .camera i:hover{

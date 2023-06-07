@@ -25,11 +25,26 @@
                         <p> User</p>
 
                     </div>
-                    <span class="menu-general">
+                    <span class="icon-menu-general" id="iconMenuGeneral" onclick="showHideMenuGeneral()">
                         <svg viewBox="0 0 24 24" width="24" height="24" class=""><path fill="currentColor" d="M12 7a2 2 0 1 0-.001-4.001A2 2 0 0 0 12 7zm0 2a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 9zm0 6a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 15z"></path></svg>
-                    </span>
+                    </span>      
 
                 </div>
+
+                <div class="menu-content">
+                    <div class="menu-general" id="menuGeneral">
+                        <div class="item-menu" id="profile" onclick="afficherProfile()">
+                            <p >Profile</p>
+                        </div>
+                        <div class="item-menu" id="logOut">
+                            <p>Déconnexion</p>
+                        </div>
+                            
+                    </div>
+                    
+                </div>
+               
+                    
                 <div class="search-bar">
                     <form action="" class="form-search">
                         <input type="text" name="" id="search" placeholder="Search...">
@@ -141,7 +156,7 @@
             </div>
 
             <div class="rightSide">
-                <div class="content-chat">
+                <div class="content-chat" id="contentChat">
                     
                     <div class="header-chat">
                         <div class="info-destinataire">
@@ -368,6 +383,19 @@
 
                 </div>
 
+                <div class="content-profile" id="contentProfile">
+                    <div class="content-profile-header">
+                        <span >
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </span>
+                       
+                        <div class="header-title">
+                            <p>PROFILE</p>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
 
         </div>
@@ -375,6 +403,8 @@
 
     <script src="js/scrollTextarea.js"></script>
     <script src="js/searchBar.js"></script>
+    <script src="js/afficherMasquerMenuGeneral.js"></script>
+    <script src="js/afficherProfile.js"></script>
     
 </body>
 </html>

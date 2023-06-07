@@ -102,8 +102,9 @@ body{
     font-weight: bold;
     font-size: large;
 }
-.menu-general{
-   /*border: 2px solid green;*/
+.icon-menu-general{
+    /*border: 2px solid green;*/
+    border-radius: 50%;
     height: 40px;
     width: 40px;
     display: flex;
@@ -111,10 +112,50 @@ body{
     justify-content: center;
     cursor: pointer;
 }
-.menu-general svg{
+.icon-menu-general svg{
     color: var(--colorArrierePlan);
     font-weight: bold;
     font-size: xx-large;
+}
+.menu-content{
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.menu-general{
+    display: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px black;
+    width: 150px;
+    /*border: 1px solid black;*/
+    position: fixed;
+    background-color: var(--colorArrierePlanMainChat);
+    float: right;
+    margin-right: 15px;
+    margin-top: -10px;
+    /*display: none;*/
+   
+}
+.menu-general p{
+    margin: 0px 0px;
+    padding: 0px 0px;
+    font-size: large;
+}
+.item-menu{
+    /*width: 100%;*/
+    cursor: pointer;
+    padding: 5px 10px 5px 10px;
+    /*border-radius: 5px;*/
+
+}
+.item-menu:hover{
+    background-color: var(--colorHeaderChat);
+}
+#profile{
+    border-radius: 5px 5px 0px 0px;
+}
+#logOut{
+    border-radius: 0px 0px 5px 5px;
 }
 .search-bar{
    /* border: 1px solid black ;*/
@@ -473,4 +514,36 @@ button[type="reset"]{
 }
 .send-message i:hover{
     font-size: xx-large;
+}
+
+
+
+
+
+
+/****** Gestion de la page du profile ************ */
+
+.content-profile{
+    display: none;
+}
+
+.content-profile-header{
+    display: flex;
+    border: 2px solid red;
+
+    width: 100%;
+}
+
+.content-profile-header span{
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-title{
+    flex: 1;
+    border: 2px solid blue;
+
 }
