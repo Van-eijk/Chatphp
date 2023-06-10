@@ -3,9 +3,11 @@
 
 let iconCamera = document.getElementById("iconCamera");
 let barreNotification = document.getElementById("notif");
+let textNotif = document.getElementById("textNotif");
 
 function pictureSelected(){
     barreNotification.style.display = "block";
+    textNotif.innerHTML = "Photo sélectionnée";
     iconCamera.style.color = "greenyellow";
     setTimeout(function(){
         barreNotification.style.display = "none";

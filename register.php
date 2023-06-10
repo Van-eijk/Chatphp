@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,11 +15,15 @@
 
         </div>
         <div class="mainchat">
+            <?php
+                if(isset($erreurComparaisonMotDePasse)){
+                    echo $erreurComparaisonMotDePasse ;
+                }
+             ?>
 
             <!--  Barre de notification   -->
             <div class="barre-notification" id="notif">
-                <p class="notification">
-                    Photo sélectionnée
+                <p class="notification" id="textNotif">
                 </p>
             </div>
 
@@ -32,7 +37,7 @@
                 </label>
            </div>
 
-            <form action="">
+            <form action="php/registerFormulaire.php" method="POST" enctype="multipart/form-data">
 
                 <!--  Ici on recupère la photo dans l'ordinateur -->
 
@@ -71,7 +76,7 @@
                 </div>
 
                 <div class="sub">
-                    <input type="submit" value="INSCRIPTION">
+                    <input type="submit" name="inscription" value="INSCRIPTION">
                 </div>
 
                 
