@@ -95,95 +95,42 @@
                     </div>
                     <div class="members-resultSearch">
                         <div class="members">
-                            <div class="item-chat">
-                                <span class="item-photo">
-                                    <img src="pictures/iconDefault.png" alt="user photo">
-                                </span>
-                                <div class="user">
-                                    <p>Username</p>
-                                </div>
-                            </div>
 
-                            <div class="item-chat">
-                                <span class="item-photo">
-                                    <img src="pictures/iconDefault.png" alt="user photo">
-                                </span>
-                                <div class="user">
-                                    <p>Username</p>
-                                </div>
-                            </div>
 
-                            <div class="item-chat">
-                                <span class="item-photo">
-                                    <img src="pictures/iconDefault.png" alt="user photo">
-                                </span>
-                                <div class="user">
-                                    <p>Username</p>
-                                </div>
-                            </div>
+                            <?php 
+                                // Récupération de la liste des membres depuis la base de données
 
-                            <div class="item-chat">
-                                <span class="item-photo">
-                                    <img src="pictures/iconDefault.png" alt="user photo">
-                                </span>
-                                <div class="user">
-                                    <p>Username</p>
-                                </div>
-                            </div>
+                                $requetteListeMembres = $connexionDB -> query('SELECT pseudo, photo FROM membres ORDER BY pseudo');
 
-                            <div class="item-chat">
-                                <span class="item-photo">
-                                    <img src="pictures/iconDefault.png" alt="user photo">
-                                </span>
-                                <div class="user">
-                                    <p>Username</p>
-                                </div>
-                            </div>
+                                while($resultatRequetteListeMembres = $requetteListeMembres -> fetch()){ ?>
 
-                            <div class="item-chat">
-                                <span class="item-photo">
-                                    <img src="pictures/iconDefault.png" alt="user photo">
-                                </span>
-                                <div class="user">
-                                    <p>Username</p>
+                                <div class="item-chat">
+                                    <span class="item-photo">
+                                        <img src="<?php if(isset($resultatRequetteListeMembres['photo'])){
+                                            echo($resultatRequetteListeMembres['photo']);
+                                        }
+                                        else{
+                                            echo("pictures/iconDefault.png");
+                                        } ?>" alt="user photo">
+                                    </span>
+                                    <div class="user">
+                                        <p>
+                                                <?php if(isset($resultatRequetteListeMembres['pseudo'])){
+                                                echo(ucfirst(strtolower($resultatRequetteListeMembres['pseudo'])));
+                                            }
+                                            else{
+                                                echo("Username");
+                                            } ?>
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="item-chat">
-                                <span class="item-photo">
-                                    <img src="pictures/iconDefault.png" alt="user photo">
-                                </span>
-                                <div class="user">
-                                    <p>Username</p>
-                                </div>
-                            </div>
+                              
+                            <?php
+                                }
+                            ?>
+                            
 
-                            <div class="item-chat">
-                                <span class="item-photo">
-                                    <img src="pictures/iconDefault.png" alt="user photo">
-                                </span>
-                                <div class="user">
-                                    <p>Username</p>
-                                </div>
-                            </div>
-
-                            <div class="item-chat">
-                                <span class="item-photo">
-                                    <img src="pictures/iconDefault.png" alt="user photo">
-                                </span>
-                                <div class="user">
-                                    <p>Username</p>
-                                </div>
-                            </div>
-
-                            <div class="item-chat">
-                                <span class="item-photo">
-                                    <img src="pictures/iconDefault.png" alt="user photo">
-                                </span>
-                                <div class="user">
-                                    <p>Username</p>
-                                </div>
-                            </div>
 
                         </div>
 
@@ -200,7 +147,7 @@
                                     <img src="pictures/iconDefault.png" alt="">
 
                                 </span>
-                                <p>Username</p>
+                                <p>Chat & Yamo</p>
 
                             </div>
                             <span class="menu-destinataire">

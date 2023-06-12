@@ -66,6 +66,7 @@ body{
     flex: 0.5;
     display: flex;
     flex-direction: column;
+    /*padding: 0px 0px 0px 5px;*/
 
 }
 
@@ -243,6 +244,7 @@ button[type="reset"]{
     flex: 1;
     flex-direction: column;
     overflow: auto;
+    /*padding-left: 5px;*/
 }
 .item-chat{
     display: flex;
@@ -253,6 +255,7 @@ button[type="reset"]{
     cursor: pointer;
     border: none;
     /*overflow: hidden;*/
+    /*margin-left: 5px;*/
 }
 .item-chat:hover{
     background-color: var(--colorBody);
@@ -263,11 +266,13 @@ button[type="reset"]{
     align-items: center;
     /*border: 1px solid black;*/
     margin-right: 8px;
+    border-radius: 50%;
 
 }
 .item-photo img{
     width: 55px;
     height: 55px;
+    border-radius: 50%;
 }
 .user{
     /*border: 10px solid black;*/
@@ -278,6 +283,7 @@ button[type="reset"]{
     height: 100%;
     display: flex;
     flex: 1;
+    align-items: center;
 
 }
 
