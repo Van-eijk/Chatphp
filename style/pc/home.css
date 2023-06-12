@@ -97,6 +97,7 @@ body{
 .photo-profil img{
     height: 60px;
     width: 60px;
+    border-radius: 50%;
 }
 .user-info p{
     font-weight: bold;

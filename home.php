@@ -15,9 +15,17 @@
 
 
     <?php 
-        // On récupère le pseudo de l'utilisateur
+        // On récupère la photo de profil de l'utilisateur
 
-        //$requettePseuo = $connexionDB -> prepare('')
+        $requettePhotoProfil = $connexionDB -> prepare('SELECT photo FROM membres WHERE id = :idUser');
+        $requettePhotoProfil -> execute(array(
+            'idUser' => $_SESSION['id']
+        ));
+
+        $resultatRequettePhotoProfil = $requettePhotoProfil -> fetch();
+        if($resultatRequettePhotoProfil){
+            $_SESSION['photoProfil'] = $resultatRequettePhotoProfil['photo'];
+        }
 
         
     ?>
@@ -44,11 +52,13 @@
                     <div class="header-leftSide">
                         <div class="user-info">
                             <span class="photo-profil">
-                                <img src="pictures/iconDefault.png" alt="">
+                                <img src="<?php echo $_SESSION['photoProfil']; ?>" alt="">
 
                             </span>
 
-                            <p> <?php echo $_SESSION['pseudo']; ?></p>
+                            <p> <?php 
+                                        echo(ucfirst(strtolower($_SESSION['pseudo']))) ; // On converti d'abord la chaine de caractère en minuscule, ensuite, on converti uniquement la première lettre en majuscule
+                            ?></p>
 
                         </div>
                         <span class="icon-menu-general" id="iconMenuGeneral" onclick="showHideMenuGeneral()">
