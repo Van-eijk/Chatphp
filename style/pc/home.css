@@ -141,6 +141,16 @@ body{
     padding: 0px 0px;
     font-size: large;
 }
+.menu-general a{
+    text-decoration: none;
+    /*color: yellow;*/
+    margin: 0px 0px;
+    padding: 0px 0px;
+    font-size: large;
+    color: black;
+
+
+}
 .item-menu{
     /*width: 100%;*/
     cursor: pointer;

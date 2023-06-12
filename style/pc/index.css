@@ -60,6 +60,28 @@ body{
 
 }
 
+.barre-notification{
+    position: absolute;
+    top: 45px;
+    left: 45%;
+    background-color: greenyellow;
+    padding: 5px 5px;
+    border-radius: 5px;
+    display: none;
+    /*display: none;
+    align-items: center;
+    justify-content: center;*/
+}
+
+.notification{
+    margin: 0px 0px;
+    padding: 0px 0px;
+    color: var(--colorArrierePlanMainChat);
+    font-weight: bold;
+    font-size: large;
+    /*color: yellow;*/
+}
+
 .icon-user i{
     font-size: 100px;
     color: var(--colorArrierePlan);

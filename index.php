@@ -1,3 +1,65 @@
+<script>
+    /***  Déclaration des variables js */
+
+    let erreurIdentifiantJs = false;
+</script>
+
+
+
+
+
+<?php
+    include('Database/config.php');
+    session_start();
+
+ ?>
+
+<?php 
+
+    if(isset($_POST['login'])){
+        $pseudo = $_POST['pseudo'];
+        $password = $_POST['password'];
+        $password = sha1($password);
+    
+        $requetteLogin = $connexionDB -> prepare('SELECT id FROM membres WHERE pseudo = :pseu AND motdepasse = :pass');
+        $requetteLogin -> execute(array(
+            'pseu' => $pseudo,
+            'pass' => $password
+        ));
+    
+        $resultatRequetteLogin = $requetteLogin -> fetch();
+    
+        if($resultatRequetteLogin){
+           
+            $_SESSION['id'] = $resultatRequetteLogin['id'];
+            $_SESSION['pseudo'] = $pseudo ;
+
+            header("location:home.php");
+            exit;
+
+            //echo $_SESSION['id'] . " " . $_SESSION['pseudo'];
+
+    
+        }
+        else{
+            $erreurIdentifiant = "Pseudo ou mot de passe incorrecte";
+           // echo $erreurIdentifiant ; ?>
+
+           <script>
+                erreurIdentifiantJs = true ;
+           </script>
+        <?php 
+            }
+    }
+
+
+
+   
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +76,16 @@
 
         </div>
         <div class="mainchat">
+
+         <!--  Barre de notification   -->
+
+            <div class="barre-notification" id="notif">
+                <p class="notification" id="textNotif">
+                    
+                </p>
+            </div>
+
+
             <h1>CHAT & YAMO</h1>
             <span class="icon-user">
                 <i class="fa-solid fa-circle-user">
@@ -21,7 +93,7 @@
                 </i>
             </span>
 
-            <form action="">
+            <form action="index.php" method="POST">
 
                 <div class="pseudo">
                     <span><i class="fa-solid fa-user"></i></span>
@@ -39,7 +111,7 @@
                 </div>
 
                 <div class="sub">
-                    <input type="submit" value="CONNEXION">
+                    <input type="submit" name="login" value="CONNEXION">
                 </div>
 
                 
@@ -56,5 +128,19 @@
 
    
     <script src="js/afficherMasquerMotDePasse.js"></script>
+    <script src="js/afficherBarreNotification.js"></script>
+    <script src="js/masquerBarreNotification.js"></script>
+
+
+    <script>
+        if(erreurIdentifiantJs){
+            afficherBarreNotification();
+            document.getElementById("notif").style.backgroundColor = "red";
+            document.getElementById("textNotif").innerHTML = "Pseudo ou mot de passe incorrect ";
+            masquerBarreNotification();
+            
+
+        }
+    </script>
 </body>
 </html>
