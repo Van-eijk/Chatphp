@@ -22,10 +22,10 @@ ENGINE = INNODB ;
 
 
 CREATE TABLE IF NOT EXISTS discussion(
-id_discussion INT NOT NULL AUTO_INCREMENT,
-pseudo_membre VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
-photo_pseudo_membre VARCHAR(200) COLLATE utf8_unicode_ci NOT NULL,
-message_membre TEXT COLLATE utf8_unicode_ci NOT NULL,
-date_message TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-CONSTRAINT PRIMARY KEY(id_discussion))
-ENGINE = INNODB;
+iddiscussion INT NOT NULL AUTO_INCREMENT,
+pseudomembre VARCHAR(100) NOT NULL,
+photomembre VARCHAR(200) NOT NULL,
+messagemembre TEXT NOT NULL,
+datemessage TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+CONSTRAINT PRIMARY KEY(iddiscussion))
+ENGINE = INNODB ;

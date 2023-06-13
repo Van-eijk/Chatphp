@@ -32,6 +32,31 @@
 
 
 
+
+
+
+<?php
+    // script pour envoyer un message dans la base de donnéees
+
+    if(isset($_POST['sendMessage'])){
+
+        if(isset($_POST['messages'])){
+            $messageUser = $_POST['messages'];
+             /****  INSERTION DES INFORMATIONS DANS LA BASE DE DONNEES  ***** */
+
+             $requetteEnvoieMessage = $connexionDB -> prepare('INSERT INTO discussion(pseudomembre,photomembre,messagemembre) VALUES (:pseudoM, :photoM, :messageM)');
+
+             $requetteEnvoieMessage -> execute(array(
+                 'pseudoM' => $_SESSION['pseudo'],
+                 'photoM' => $_SESSION['photoProfil'],
+                 'messageM' => $messageUser
+             ));
+        }
+    }
+?>
+
+
+
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -128,6 +153,7 @@
                               
                             <?php
                                 }
+                                $requetteListeMembres -> closeCursor();
                             ?>
                             
 
@@ -350,7 +376,7 @@
                         </div>
                         
 
-                        <form action="" method="POST" enctype="multipart/form-data" class="footer-chat">
+                        <form action="home.php" method="POST" enctype="multipart/form-data" class="footer-chat">
 
                             <button class="menu-file">
                                 <i class="fa-solid fa-paperclip"></i>
@@ -358,15 +384,17 @@
                             </button>
                             <textarea name="messages" id="msg" class="message" placeholder="Send message..." required autofocus></textarea>
 
-                            <button type="submit" class="send-message">
+                            <button type="submit" class="send-message" name="sendMessage">
                                 <i class="fa-solid fa-paper-plane"></i>
                             </button>
 
                         </form>
 
                     </div>
+                    
 
                     <div class="content-profile" id="contentProfile">
+                    
                         <div class="content-profile-header">
                             <span >
                                 <i class="fa-solid fa-arrow-left"></i>
