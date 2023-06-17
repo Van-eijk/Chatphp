@@ -50,10 +50,11 @@ body{
 .mainchat{
     width: 900px;
     height: 600px;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     background-color: var(--colorArrierePlanMainChat);
     display: flex;
-    /*padding: 1px;*/
+    padding: 5px 5px;
+    border-radius: 5px;
 
 
 }
@@ -379,6 +380,11 @@ button[type="reset"]{
     background: rgba(255,255,255,.1);
 }
 
+.mainMsg{
+    color: black;
+    /*font-weight: bold;*/
+}
+
 .photo-message-left{
     display: flex;
     margin: 0px 0px 10px 0px;
@@ -403,6 +409,7 @@ button[type="reset"]{
     min-width: 50px;
     min-height: 50px;
     margin: 0px 0px;
+    border-radius: 50%;
     
 }
 
@@ -420,6 +427,7 @@ button[type="reset"]{
     padding: 0px 0px;
     font-weight: bold;
     color: var(--colorArrierePlan);
+    font-size: large;
 }
 .main-message{
     margin: 0px 0px;
@@ -427,6 +435,7 @@ button[type="reset"]{
     /*font-size: x-small;
     color: blue;*/
     font-weight: 300;
+    font-size: x-large;
 }
 .message-date{
     text-align: right;

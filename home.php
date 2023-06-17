@@ -1,3 +1,12 @@
+<script>
+        var positionMessageJS ;
+</script>
+
+
+
+
+
+
 <?php
     session_start();
     include('Database/config.php');
@@ -35,25 +44,25 @@
 
 
 
-<?php
-    // script pour envoyer un message dans la base de donnéees
+    <?php
+        // script pour envoyer un message dans la base de donnéees
 
-    if(isset($_POST['sendMessage'])){
+        if(isset($_POST['sendMessage'])){
 
-        if(isset($_POST['messages'])){
-            $messageUser = $_POST['messages'];
-             /****  INSERTION DES INFORMATIONS DANS LA BASE DE DONNEES  ***** */
+            if(isset($_POST['messages'])){
+                $messageUser = $_POST['messages'];
+                /****  INSERTION DES INFORMATIONS DANS LA BASE DE DONNEES  ***** */
 
-             $requetteEnvoieMessage = $connexionDB -> prepare('INSERT INTO discussion(pseudomembre,photomembre,messagemembre) VALUES (:pseudoM, :photoM, :messageM)');
+                $requetteEnvoieMessage = $connexionDB -> prepare('INSERT INTO discussion(pseudomembre,photomembre,messagemembre) VALUES (:pseudoM, :photoM, :messageM)');
 
-             $requetteEnvoieMessage -> execute(array(
-                 'pseudoM' => $_SESSION['pseudo'],
-                 'photoM' => $_SESSION['photoProfil'],
-                 'messageM' => $messageUser
-             ));
+                $requetteEnvoieMessage -> execute(array(
+                    'pseudoM' => $_SESSION['pseudo'],
+                    'photoM' => $_SESSION['photoProfil'],
+                    'messageM' => $messageUser
+                ));
+            }
         }
-    }
-?>
+    ?>
 
 
 
@@ -94,7 +103,7 @@
 
                     <div class="menu-content">
                         <div class="menu-general" id="menuGeneral">
-                            <div class="item-menu" id="profile" onclick="afficherProfile()">
+                            <div class="item-menu" id="profile" onclick="afficherProfile()" style="display: none;">
                                 <p>Profile</p>
                             </div>
                             <div class="item-menu" id="logOut">
@@ -186,22 +195,68 @@
                         <div class="discussion">
                             <!-- Messages entre l'émetteur et le recepteur -->
 
-                            <div class="photo-message-left">
-                                <div class="photo-left">
-            
-                                    <img src="pictures/iconDefault.png" alt="">
 
-                                </div>
-                                <div class="message-left">
-                                    <p class="message-left-name">
-                                        Username
-                                    </p>
-                                    <p class="main-message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolore possimus at earum! Voluptatum ipsum aut vero vel enim nostrum quisquam libero, facere amet numquam quos veritatis maiores ex nesciunt!</p>
-                                    <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
-                                </div>
+                            <?php 
+                                
+                                // Script pour récupérer les messages depuis la base de données
 
-                            </div>
-                            <div class="photo-message-right">
+                                $requetteRecuperationMessage = $connexionDB -> query('SELECT * FROM discussion LIMIT 20');
+
+                                while($resultatrequetteRecuperationMessage = $requetteRecuperationMessage -> fetch()){
+
+                                    ?>
+
+                                    
+                                        <div class="mainMsg photo-message-left ">
+                                            <div class="photo-left">
+                        
+                                                <img src="<?php echo($resultatrequetteRecuperationMessage['photomembre']); ?>" alt="">
+
+                                            </div>
+                                            <div class="message-left">
+                                                <p class="message-left-name">
+                                                    <?php echo($resultatrequetteRecuperationMessage['pseudomembre']); ?>
+                                                </p>
+                                                <p class="main-message"><?php echo($resultatrequetteRecuperationMessage['messagemembre']); ?></p>
+                                                <p class="message-date"><?php echo($resultatrequetteRecuperationMessage['datemessage']); ?></p>
+                                            </div>
+
+                                        </div>
+
+                                        
+                                        
+
+
+                               
+                               
+                               <?php
+                                     }
+                                
+
+                            ?>
+
+                            
+
+                                <article class="photo-message-left" style=" display : none ;">
+                                    <div class="photo-left">
+                
+                                        <img src="pictures/iconDefault.png" alt="">
+
+                                    </div>
+                                    <div class="message-left">
+                                        <p class="message-left-name">
+                                            Username
+                                        </p>
+                                        <p class="main-message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolore possimus at earum! Voluptatum ipsum aut vero vel enim nostrum quisquam libero, facere amet numquam quos veritatis maiores ex nesciunt!</p>
+                                        <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
+                                    </div>
+
+                                </article>
+                            
+
+
+
+                            <div class="photo-message-right" style=" display : none ;">
                                 <div class="photo-right">
                                     <img src="pictures/iconDefault.png" alt="">
                                 </div>
@@ -218,156 +273,7 @@
 
 
 
-                            <div class="photo-message-left">
-                                <div class="photo-left">
-            
-                                    <img src="pictures/iconDefault.png" alt="">
-
-                                </div>
-                                <div class="message-left">
-                                    <p class="message-left-name">
-                                        Username
-                                    </p>
-                                    <p class="main-message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolore possimus at earum! Voluptatum ipsum aut vero vel enim nostrum quisquam libero, facere amet numquam quos veritatis maiores ex nesciunt!</p>
-                                    <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
-                                </div>
-
-                            </div>
-                            <div class="photo-message-right">
-                                <div class="photo-right">
-                                    <img src="pictures/iconDefault.png" alt="">
-                                </div>
-                                <div class="message-right">
-                                    <p class="main-message">Lorem ipsum, dolor sit </p>
-                                    <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
-
-                                </div>
-
-                            </div>
-
-
-
-
-
-
-                            <div class="photo-message-left">
-                                <div class="photo-left">
-            
-                                    <img src="pictures/iconDefault.png" alt="">
-
-                                </div>
-                                <div class="message-left">
-                                    <p class="message-left-name">
-                                        Username
-                                    </p>
-                                    <p class="main-message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolore possimus at earum! Voluptatum ipsum aut vero vel enim nostrum quisquam libero, facere amet numquam quos veritatis maiores ex nesciunt!</p>
-                                    <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
-                                </div>
-
-                            </div>
-                            <div class="photo-message-right">
-                                <div class="photo-right">
-                                    <img src="pictures/iconDefault.png" alt="">
-                                </div>
-                                <div class="message-right">
-                                    <p class="main-message">Lorem ipsum, dolor sit </p>
-                                    <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
-
-                                </div>
-
-                            </div>
-
-
-
-
-
-
-                            <div class="photo-message-left">
-                                <div class="photo-left">
-            
-                                    <img src="pictures/iconDefault.png" alt="">
-
-                                </div>
-                                <div class="message-left">
-                                    <p class="message-left-name">
-                                        Username
-                                    </p>
-                                    <p class="main-message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolore possimus at earum! Voluptatum ipsum aut vero vel enim nostrum quisquam libero, facere amet numquam quos veritatis maiores ex nesciunt!</p>
-                                    <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
-                                </div>
-
-                            </div>
-                            <div class="photo-message-right">
-                                <div class="photo-right">
-                                    <img src="pictures/iconDefault.png" alt="">
-                                </div>
-                                <div class="message-right">
-                                    <p class="main-message">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor soluta est cupiditate autem, vitae eos iusto sunt quam dolorum, maiores reprehenderit velit cumque maxime ab natus, atque sapiente eum aliquid. </p>
-                                    <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
-
-                                </div>
-
-                            </div>
-
-
-
-
-                            <div class="photo-message-left">
-                                <div class="photo-left">
-            
-                                    <img src="pictures/iconDefault.png" alt="">
-
-                                </div>
-                                <div class="message-left">
-                                    <p class="message-left-name">
-                                        Username
-                                    </p>
-                                    <p class="main-message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolore possimus at earum! Voluptatum ipsum aut vero vel enim nostrum quisquam libero, facere amet numquam quos veritatis maiores ex nesciunt!</p>
-                                    <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
-                                </div>
-
-                            </div>
-                            <div class="photo-message-right">
-                                <div class="photo-right">
-                                    <img src="pictures/iconDefault.png" alt="">
-                                </div>
-                                <div class="message-right">
-                                    <p class="main-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni eligendi temporibus veritatis aliquid numquam sint sequi quaerat odit accusamus, voluptatum rerum maiores! Veritatis laudantium voluptatem eaque eligendi aliquid aliquam distinctio! </p>
-                                    <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
-
-                                </div>
-
-                            </div>
-
-
-
-
-                            <div class="photo-message-left">
-                                <div class="photo-left">
-            
-                                    <img src="pictures/iconDefault.png" alt="">
-
-                                </div>
-                                <div class="message-left">
-                                    <p class="message-left-name">
-                                        Username
-                                    </p>
-                                    <p class="main-message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolore possimus at earum! Voluptatum ipsum aut vero vel enim nostrum quisquam libero, facere amet numquam quos veritatis maiores ex nesciunt!</p>
-                                    <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
-                                </div>
-
-                            </div>
-                            <div class="photo-message-right">
-                                <div class="photo-right">
-                                    <img src="pictures/iconDefault.png" alt="">
-                                </div>
-                                <div class="message-right">
-                                    <p class="main-message">Lorem ipsum, dolor sit </p>
-                                    <p class="message-date">jeudi 01 juin 2023 à 22:24</p>
-
-                                </div>
-
-                            </div>
+                            
 
 
 
@@ -416,6 +322,33 @@
         <script src="js/searchBar.js"></script>
         <script src="js/afficherMasquerMenuGeneral.js"></script>
         <script src="js/afficherProfile.js"></script>
+
+        <script>
+           /* var userJs = "<?php echo($_SESSION['pseudo']) ; ?>"
+            var messageJs = document.getElementsByClassName(userJs);
+            var attribut ;
+            
+
+           if(positionMessageJS){
+                let i = 0;
+                for(i=0 ; i< messageJs.length ; i++){
+                   attribut = messageJs[i].getAttribute("title");
+                   if(attribut == userJs ){
+                        messageJs[i].classList.replace("photo-message-left","photo-message-right");
+                   }
+
+                   messageJs[i].style.backgroundColor= "red";
+                }
+            }
+            
+           // alert(userJs);
+
+            //document.getElementById(userJs).style.backgroundColor = "red";
+
+            */
+
+            
+        </script>
         
     </body>
     </html>
